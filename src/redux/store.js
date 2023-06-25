@@ -3,10 +3,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import { authReducer } from './reducers/auth.reducer';
 import { homeVideosReducer, relatedVideoReducer } from './reducers/videos.reducer';
-import { selectedVideoReducer, searchedVideosReducer, subscriptionsChannelReducer } from './reducers/videos.reducer';
+import { selectedVideoReducer, subscriptionsChannelReducer } from './reducers/videos.reducer';
 import { channelDetailsReducer } from './reducers/channel.reducer';
 import { commentListReducer } from './reducers/comments.reducer';
 import { channelVideosReducer } from './reducers/videos.reducer';
+import { searchedVideosReducer } from './reducers/videos.reducer';
 
 const rootReducer = combineReducers({
     auth: authReducer,

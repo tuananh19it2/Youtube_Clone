@@ -138,12 +138,11 @@ export const getVideosBySearch = (keyword) => async (dispatch) => {
                 type: 'video, channel'
             }
         })
-        console.log('check search: ', {data});
+        console.log('check search: ', data);
         dispatch({
             type: SEARCHED_VIDEO_SUCCESS,
             payload: data.items
-        })
-        
+        }) 
     } catch (e) {
         console.log(e.message);
         dispatch({

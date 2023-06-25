@@ -6,6 +6,7 @@ import { getVideosBySearch } from '../redux/actions/videos.action'
 import VideoHorizontal from '../Components/VideoHorizontal/VideoHorizontal';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 
+
 const SearchScreen = () => {
    const { query } = useParams()
 
@@ -13,9 +14,9 @@ const SearchScreen = () => {
 
    useEffect(() => {
       dispatch(getVideosBySearch(query))
-   }, [query, dispatch])
+   }, [dispatch, query])
 
-   const { videos, loading } = useSelector(state => state.searchedVideos)
+   const {videos, loading} = useSelector(state => state.searchedVideos);
 
    return (
       <Container>

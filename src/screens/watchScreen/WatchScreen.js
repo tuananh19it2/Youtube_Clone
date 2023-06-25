@@ -23,6 +23,7 @@ const WatchScreen = () => {
     const {videos, loading: relatedToVideosLoading} = useSelector(state => state.relatedVideos);
   return (
     <Row>
+        
         <Col lg={8}>
             <div className='watchScreen_player'>
                 <iframe src={`https://www.youtube.com/embed/${id}`}
